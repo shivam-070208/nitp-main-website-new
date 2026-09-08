@@ -195,19 +195,16 @@ const ExamPeoplePage = () => {
         <div className="space-y-10 py-2">
             {/* Header */}
             <div className="border-b border-gray-200 pb-4">
-                <h1 className="text-2xl md:text-3xl font-bold text-red-900">People & Key Contacts</h1>
-                <p className="text-gray-600 text-sm md:text-base mt-1">
-                    Faculty leadership and staff members of the Examination Section.
-                </p>
+                <h1 className="text-3xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                        <Users className="text-red-800" size={22} />
+                        Exam Section Team
+                    </h1>
             </div>
 
             {/* Combined Team Section */}
             {(loadingFaculty || loadingStaff || facultyList.length > 0 || staffList.length > 0) && (
                 <div>
-                    <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                        <Users className="text-red-800" size={22} />
-                        Exam Section Team
-                    </h2>
+                    
 
                     {(loadingFaculty || loadingStaff) ? (
                         <div className="text-center py-10">
